@@ -10,13 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var microphoneEmoji: UIButton!
+    let emojis = ["🎤" : "Tongue Tied by Grouplove", "🎸" : "Guitar" ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
     @IBAction func showMessage(sender: UIButton) {
-        
+       
+        let selectedEmotion = sender.titleLabel?.text
+
         //After button is tapped, the message displays.
         //There will be multiple messages.
         
